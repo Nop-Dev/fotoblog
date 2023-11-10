@@ -36,6 +36,32 @@ body {
     margin-inline: auto;
 }
 
+nav, ul {
+    display: flex;
+    align-items: center;
+    gap: 2.6rem;
+    font-weight: 700;
+}
+
+ul li {
+    list-style: none;
+    color: var(--color-base-gray-300);
+}
+
+ul li:hover {
+    color: var(--color-base-gray-900);
+}
+
+form {
+    flex: 1;
+}
+
+.avatar {
+    height: 4.0rem;
+    width: 4.0rem;
+    border-radius: 50%;
+}
+
 main {
     background-color: var(--color-base-gray-100);
     overflow-y: scroll;
@@ -43,4 +69,6 @@ main {
 
 footer {
     text-align: center;
+    font-weight: 600;
+    color: var(--color-base-gray-900);
 }
