@@ -39,6 +39,7 @@ body {
     margin-inline: auto;
 }
 
+/* Header */
 nav, ul {
     display: flex;
     align-items: center;
@@ -90,12 +91,12 @@ form {
     border-radius: 50%;
 }
 
+/* Gallery */
 main {
     background-color: var(--color-base-gray-100);
     overflow-y: scroll;
 }
 
-/* galeria*/
 .container h1 {
     color: var(--color-base-gray-900);
     font-size: 2.4rem;
@@ -127,6 +128,19 @@ figure {
     aspect-ratio: 16/9;
     object-fit: cover;
     overflow: hidden;
+
+    /* 
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+     */
+
+    transition: all 400ms ease-out;
+}
+
+.item img:hover {
+    filter: hue-rotate(20deg) contrast(101%) saturate(200%);
+    transform: scale(1.1) rotate(-2deg);
 }
 
 .item h2 {
@@ -148,6 +162,8 @@ figure {
     font-size: 1.2rem;
     text-transform: uppercase;
 }
+
+/* Footer */
 
 footer {
     text-align: center;
