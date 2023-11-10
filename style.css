@@ -3,7 +3,7 @@
 :root {
     font-size: 62.5%;
 
-    --color-base-white: #fff;
+    --color-base-white: rgb(255, 255, 255);
     --color-base-gray-100: #f5f5f5;
     --color-base-gray-300: #8d8d99;
     --color-base-gray-500: #3D3D3D;
@@ -95,10 +95,58 @@ main {
     overflow-y: scroll;
 }
 
+/* galeria*/
 .container h1 {
     color: var(--color-base-gray-900);
     font-size: 2.4rem;
     font-weight: 700;
+
+    padding-top: 1.8rem;
+}
+
+section#gallery {
+    margin-top: 3.2rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+figure {
+    border-radius: 8px;
+}
+
+.item {
+    border-radius: 8px;
+    background-color: var(--color-base-white);
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.item h2 {
+    color: var(--color-base-gray-900);
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    margin-bottom: 1.2rem;
+}
+
+.item figcaption {
+    padding: 2.2rem;
+}
+
+.tags span {
+    padding: .6rem;
+    background-color: var(--color-base-gray-100);
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
 footer {
