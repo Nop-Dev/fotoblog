@@ -166,7 +166,43 @@ figure {
 /* Footer */
 
 footer {
+    --startY: 100%;
+
     text-align: center;
     font-weight: 600;
     color: var(--color-base-gray-900);
+
+    animation: move  .5s;
+}
+
+/* Aplicando animações no projeto */
+
+/* Movimento */
+header {
+    --startY: -100%;
+    animation: move .5s;
+}
+
+footer {
+    --startY: 100%;
+    animation: move .5s;
+}
+
+@keyframes move {
+    from {
+        transform: translateY(var(--startY));
+    }
+}
+
+/* Aparição */
+.item {
+    --delay: 200ms;
+    animation: appear .4s var(--delay) backwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
 }
